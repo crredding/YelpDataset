@@ -10,7 +10,7 @@ The primary goal of this project is to develop a classifier which will predict a
 
 ## Data collection
 
-See (README.md)[README.md] for global data collection process.
+See [README.md](README.md) for global data collection process.
 
 ## Data preparation / Tf-Idf
 
