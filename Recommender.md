@@ -28,7 +28,7 @@ From the aggregated data above I leveraged NMF to factor the Tf-Idf output into 
 
 Using the H and W matrices from the NMF model, as well as the vocabulary from the Tf-Idf model, I analyzed the most common words and the highest ranking restaurants for each latent feature to ascertain an understanding of the model's ability to correctly interpret the text reviews. A number of clearly defined categories of restaurants were coming to the surface, a sample of which is below:  
 
-![NMFFeatures](images/NmfFeatures.png)
+![NMFFeatures](Images/NmfFeatures.png)
 
 In looking through the features, it appeared that most of the features have clear categories, capturing cuisine which makes sense as this is the most significant restaurant differentiator as opposed to service quality or location.
 
@@ -36,7 +36,7 @@ In looking through the features, it appeared that most of the features have clea
 
 I leveraged the `UMAP` library for dimensionality reduction as opposed to PCA as it was able to take into account non-linear relationships and has proven more adept at preserving the local structure of the underlying data. Generally, I was seeing a fairly good separation of restaurants with the selected number of latent features. There was some mixed up clustering in the middle which indicates that a different number of latent features could have captured the signal better.
 
-![UMAP](images/umap.png)
+![UMAP](Images/umap.png)
 
 ## Calculating similarity / Evaulation
 

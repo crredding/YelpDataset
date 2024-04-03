@@ -53,21 +53,21 @@ The following steps were completed to prepare the data for the text analysis:
 5. Duplicates/NaN removed - Duplicate businesses as well as user/business/review_text combinations were present in the dataset
 6. Restaurant tagging - Using the `categories` feature, tagged businesses that included "restaurants" in the cateogry. Note that this data is used in Yelp's search functionality for filtering:
 
-![YelpRestaurantSearch](images/YelpRestaurantSearch.png)
+![YelpRestaurantSearch](Images/YelpRestaurantSearch.png)
 
 Reviewing the output of the data showed that only businesses in the PA area remained:
 
-![GeoDistrib](images/GeoDistrib.png)
+![GeoDistrib](Images/GeoDistrib.png)
 
 The resulting review data showed reviews with an approx. length of 76 words with a mean 3.75 star rating:
 
-![ReviewWords](images/ReviewWords.png)
+![ReviewWords](Images/ReviewWords.png)
 
-![ReviewStars](images/ReviewStars.png)
+![ReviewStars](Images/ReviewStars.png)
 
 Additionally, included business had a minimuim of 5 and a mean of 76 reviews:
 
-![ReviewsByBusiness](images/ReviewCount.png)
+![ReviewsByBusiness](Images/ReviewCount.png)
 
 # Classifier and recommender
 

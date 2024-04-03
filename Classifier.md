@@ -24,33 +24,33 @@ The initial TF-Idf featurizer was fit with 500 features, but this could be tuned
 
 The first classifier fit was a logisitc regression, fit on the entire 75% training data set with `is_restaurant` as the target variable. Leveraging the `predict_proba` function, I fit an ROC curve of the training data showing an AUC of 0.97:
 
-![LRCurves](images/LrCurves.png)
+![LRCurves](Images/LrCurves.png)
 
 ### Coefficients
 
 An examination of the coefficients showed expected high values for clearly restaurant related words (e.g. food, pizza, etc.) and low values for clearly non-restaurant related words (e.g. salon, massage, etc.). This was expected and demonstrated the models ability to correctly classify food-related terms.
 
-![LRCurves](images/LrCoefs.png)
+![LRCurves](Images/LrCoefs.png)
 
 ## Random forest
 
 The next classifier fit was a random forest, fit simiarliy to the logistic regression model, above. However, given the size of the dataset and the increased training time, I selected 5 subsample sets of 100k reviews each and trained 5 seperate models, averaging their metrics for reporting. Each model materially agreed with the others, resulting in a mean AUC of 0.96:
 
-![RFCurves](images/RfCurves.png)
+![RFCurves](Images/RfCurves.png)
 
 ### Feature importance
 
 Examining the feature importance showed that the most frequent splits made a lot of sense given that they are words clearly associated with restaurants (e.g. food, restaurant, delicious, etc.). Including "restaurant" in here could be considered a form of data leakage, but given the use-case I believe it is appropriate to include it in the model
 
-![RFFeatures](images/RfFeatures.png)
+![RFFeatures](Images/RfFeatures.png)
 
 ## Heteroscedasticity
 
 As an aside, I wanted to understand both model's abilities to classify reviews of varying lenghts, with the hypothesis that longer reviews would be easier to classify. I did this by calculing the residuals against the reviews lenght in words, resulting in the following heteroscedasticity plots which materially confirmed my hypothesis:
 
-![LrHetero](images/LrHetero.png)
+![LrHetero](Images/LrHetero.png)
 
-![RfHetero](images/RfHetero.png)
+![RfHetero](Images/RfHetero.png)
 
 ## Use case testing
 
@@ -62,7 +62,7 @@ To further demonstrate a use clear use case I created 4 example reviews myself a
 
 The classifiers performed fairly well on all 4 reviews, with the notable exception of the random forest classifier which misclassified review #1.
 
-![Samples](images/ClassifierSamples.png)
+![Samples](Images/ClassifierSamples.png)
 
 # Conclusions
 
