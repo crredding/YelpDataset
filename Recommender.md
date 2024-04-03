@@ -11,7 +11,7 @@ A user's feeling about a given restaurant will be taken from either their star r
 
 ## Data collection
 
-See (README.md)[README.md] for global data collection process.
+See [README.md](README.md) for global data collection process.
 
 ## Data preparation / Tf-Idf
 

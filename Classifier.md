@@ -70,7 +70,7 @@ Based on the above, it appears that the LogisticRegression classifier performs b
 
 ## Choosing a prediction threshold
 
-The next step in the process would be to select an appropriate threshold for classification taking into account the cost of a FP and FN. For example, we may determine that prompting a user to tag a review as "restaurant" when it is in fact a gas station, may lead to user churn and or dirty data. Therefor, in an effort to minimize FPs we may choose a prediction threshold with a higher Precision over Recall for the final deployment.
+The next step in the process would be to select an appropriate threshold for classification taking into account the cost of a FP and FN. For example, we may determine that prompting a user to tag a review as "restaurant" when it is in fact a gas station, may lead to user churn and or dirty data. Therefore, in an effort to minimize FPs we may choose a prediction threshold with a higher Precision over Recall for the final deployment.
 
 # Future development
 
