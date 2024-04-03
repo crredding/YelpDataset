@@ -20,27 +20,6 @@ def split_categories(categories):
     except:
         return ""
 
-# def drop_columns(df, cols_to_drop=[]):
-#     '''
-#     Function used to drop multiple columns from dataset.
-
-#     Paramenters:
-#     ------------
-#     df: DataFrame
-#     cols_to_drop: List -- Column names to drop from the dataset
-
-#     Output:
-#     -------
-#     output: DataFrame -- Datset with columns dropped
-#     '''
-#     if len(cols_to_drop) < 1:
-#         return df
-#     else:
-#         output = df.copy()
-#         for column in cols_to_drop:
-#             output = output.drop(column, axis=1)
-#     return output
-
 def clean_business_data(df, cols_to_drop=['hours', 'attributes', 'attributes.BusinessParking', 'attributes.HairSpecializesIn', 'attributes.RestaurantsAttire', 'attributes.BestNights',
                        'attributes.Open24Hours', 'attributes.Music', 'attributes.AgesAllowed', 'attributes.BusinessAcceptsCreditCards', 'attributes.DietaryRestrictions']):
     '''
@@ -55,7 +34,7 @@ def clean_business_data(df, cols_to_drop=['hours', 'attributes', 'attributes.Bus
     -------
     df: DataFrame -- Cleaned Yelp business dataset
     '''
-    # df = drop_columns(df, cols_to_drop)
+    
     df = df.drop(cols_to_drop, axis=1)
 
     # Likely not necessary, but updating unicode string import issue leading to leading 'u's
@@ -77,7 +56,7 @@ def clean_business_data(df, cols_to_drop=['hours', 'attributes', 'attributes.Bus
 
 def clean_review_data(df, cols_to_drop=[]):
     '''
-    Function used to clean the business data set.
+    Function used to clean the review data set.
 
     Paramenters:
     ------------
@@ -89,7 +68,6 @@ def clean_review_data(df, cols_to_drop=[]):
     df: DataFrame -- Cleaned Yelp review dataset
     '''
    
-    # df = drop_columns(df, cols_to_drop)
     df = df.drop(cols_to_drop, axis=1)
 
     # drop duplicates
