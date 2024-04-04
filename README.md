@@ -37,7 +37,7 @@ Currently, the metropolitan areas centered on Montreal, Calgary, Toronto, Pittsb
 
 I leveraged the functions in the `json_to_csv_converter_py3.py` to convert the JSON files into TSV for ease of use in EDA via the `Pandas` library. This code was referenced in Yelp's dataset documentation, and a py2 example may be found [here](https://github.com/Yelp/dataset-examples/blob/master/json_to_csv_converter.py).
 
-In order to move quicker in EDA and creation, I limited the dataset that I was working with to only businesses in the Philadelphia metropolitan area. This narrowed the data set to ~34k businesses and ~1.6M reviews which was still sufficiently large to use in creating a robust classifer and recommender.
+In order to move quicker in EDA and creation, I limited the dataset that I was working with to only businesses in the PA metropolitan area. This narrowed the data set to ~34k businesses and ~1.6M reviews which was still sufficiently large to use in creating a robust classifer and recommender.
 
 I wrote a number of functions in Python which aided in cleaning the data, and filtering to just the columns necessary for an initial POC. These functions can be found in the `dataprep.py` file in this repo.
 
